@@ -27,6 +27,8 @@ Create a file in ./config named "security.json" with the following contents
 ```
 where "yourdiscordtoken" is taken from the bot token you create at https://discord.com/developers/applications
 
+For the time being, "ffmpeg.exe" must be in the root directory.
+
 ## Execution :
 On windows, just use "run.bat"
 
