@@ -22,8 +22,8 @@ module.exports = {
 				const track = tracks[index - 1];
 
 				// Then pass the selected track url over to the play command module
-				args = track.url.split();
-				const player = client.commands.get('play');
+				args = await track.url.split();
+				const player = await client.commands.get('play');
 				player.run(client, message, args);
 				// Autodelete selection number
 				message.channel.bulkDelete(collected);
