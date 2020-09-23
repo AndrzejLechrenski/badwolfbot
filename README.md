@@ -22,7 +22,7 @@ spotify-url-info (installed through npm)
 Create a file in ./config named "security.json" with the following contents
 ``` 
 {
-	"discordToken"	:	"yourdiscordtoken"
+	"discordToken"	:	"<yourdiscordtoken>"
 }
 ```
 where "yourdiscordtoken" is taken from the bot token you create at https://discord.com/developers/applications
