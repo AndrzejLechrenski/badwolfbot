@@ -1,7 +1,7 @@
 # Bad Wolf Bot
 A Discord music bot
 
-Requirements : 
+## Requirements : 
 
 Node.js
 discord.js (installed through npm)
@@ -11,7 +11,7 @@ ytpl (installed through npm)
 spotify-url-info (installed through npm)
 ffmpeg (https://ffmpeg.org/download.html)
 
-Setup : 
+## Setup : 
 
 Create a file in ./config named "security.json" with the following contents
 ``` 
@@ -21,5 +21,5 @@ Create a file in ./config named "security.json" with the following contents
 ```
 where "yourdiscordtoken" is taken from the bot token you create at https://discord.com/developers/applications
 
-Execution :
+## Execution :
 Just use "run.bat"
