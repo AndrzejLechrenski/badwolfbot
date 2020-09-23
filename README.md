@@ -1,5 +1,5 @@
 # Bad Wolf Bot
-A Discord music bot
+A Discord music bot with several functions that occasionally work.
 
 ## Requirements : 
 
