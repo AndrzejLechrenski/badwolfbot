@@ -45,7 +45,7 @@ module.exports = {
 		}
 
 		// Write the new volume to the settings file
-		fs.writeFile('./config/settings.json', JSON.stringify(settings), 'utf8', function (err) {
+		fs.writeFile('./config/settings.json', JSON.stringify(settings), 'utf8', function(err) {
 			if (err) {
 				console.log('An error occured while writing volume to File.');
 				return console.log(err);
