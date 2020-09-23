@@ -4,6 +4,7 @@ A Discord music bot
 ## Requirements : 
 
 Node.js
+
 discord.js (installed through npm)
 
 discord-ytdl-core (installed through npm)
