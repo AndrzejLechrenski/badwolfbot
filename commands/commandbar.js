@@ -14,7 +14,7 @@ module.exports = {
 		message.channel.send(`Currently playing: \`${track.name}\`\nProgress : ${client.player.createProgressBar(message.guild.id)}`).then((progress) => {
 			async function updateBar() {
 				const seconds = 3;
-				track = await client.player.nowPlaying(message.guild.id);
+				track = client.player.nowPlaying(message.guild.id);
 				progress.edit(`Currently playing: \`${track.name}\`\nProgress : ${client.player.createProgressBar(message.guild.id)}`);
 				if (!client.player.isPlaying(message.guild.id)) return progress.edit(`Finished playing: \`${track.name}\``);
 				else setTimeout(updateBar, seconds * 1000);
@@ -171,7 +171,7 @@ module.exports = {
 	},
 };
 
-
+// Done:
 // 🔉 volume down 10
 // 🔊 volume up 10
 // ▶ resume
@@ -182,8 +182,9 @@ module.exports = {
 // ⏮ return to beginning of track
 // 🔁 repeat
 // 🔽 show queue
-
 // 🔼 stop showing queue
+
+// Not
 // ⏩ ff 15 seconds
 // ⏪ rwd 15 seconds
 // 🔀 shuffle
