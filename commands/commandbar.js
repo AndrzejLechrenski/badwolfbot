@@ -25,7 +25,7 @@ module.exports = {
 
 		const queue = await client.player.getQueue(message.guild.id);
 		let volume = settings.volume;
-		const playingMessage = await message.channel.send('**Menu Bar**');
+		const playingMessage = await message.channel.send('**Track Controls**');
 
 		try {
 			await playingMessage.react('⏮');
