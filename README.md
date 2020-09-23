@@ -14,7 +14,7 @@ ytpl (installed through npm)
 
 spotify-url-info (installed through npm)
 
-ffmpeg (https://ffmpeg.org/download.html)
+[ffmpeg](https://ffmpeg.org/download.html)
 
 ## Setup : 
 
