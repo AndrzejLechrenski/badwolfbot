@@ -1,5 +1,5 @@
 node_modules
 package-lock.json
 ffmpeg.exe
-./config/security.json
+/config/security.json
 .eslintrc.json
