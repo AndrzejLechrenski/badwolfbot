@@ -5,10 +5,15 @@ A Discord music bot
 
 Node.js
 discord.js (installed through npm)
+
 discord-ytdl-core (installed through npm)
+
 ytsr (installed through npm)
+
 ytpl (installed through npm)
+
 spotify-url-info (installed through npm)
+
 ffmpeg (https://ffmpeg.org/download.html)
 
 ## Setup : 
