@@ -36,6 +36,6 @@ node index.js
 ```
 
 ## Acknowledgements : 
-Bad Wolf Bot currently uses a modified version of Androz2091's ["discord-player"](https://github.com/Androz2091/discord-player) module for it's backend
+Bad Wolf Bot currently uses a modified version of Androz2091's ["discord-player"](https://github.com/Androz2091/discord-player) module for its backend
 
 Bad Wolf Bot took inspiration from ZerioDev's ["Music-bot"](https://github.com/ZerioDev/Music-bot)
