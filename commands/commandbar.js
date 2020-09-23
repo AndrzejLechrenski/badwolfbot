@@ -25,6 +25,7 @@ module.exports = {
 
 		const queue = await client.player.getQueue(message.guild.id);
 		let volume = settings.volume;
+		let queueList;
 		const playingMessage = await message.channel.send('**Track Controls**');
 
 		try {
@@ -35,6 +36,7 @@ module.exports = {
 			await playingMessage.react('🔊');
 			await playingMessage.react('🔁');
 			await playingMessage.react('🔽');
+			await playingMessage.react('🔼');
 			await playingMessage.react('⏹');
 			await playingMessage.react('🔗');
 		}
@@ -96,7 +98,7 @@ module.exports = {
 					.catch(console.error);
 				fs.writeFile('./config/settings.json', JSON.stringify(settings), 'utf8', function (err) {
 					if (err) {
-						console.log('An error occured while writing volume to File.');
+						console.log('An error occured while writing volume to file.');
 						return console.log(err);
 					}
 					console.log('Volume has been updated to the settings file');
@@ -130,11 +132,18 @@ module.exports = {
 
 			case '🔽':
 				reaction.users.remove(user).catch(console.error);
-				message.channel.send(`**Track queue**\n **1** Current - ${queue.playing.name} | **${queue.playing.duration}** | ${queue.playing.author}\n` + (
+				queueList = message.channel.send(`**Track queue**\n**1** Current - ${queue.playing.name} | **${queue.playing.duration}** | ${queue.playing.author}\n` + (
 					queue.tracks.map((track, i) => {
 						return `**${i + 2}** - ${track.name} | **${track.duration}** | ${track.author}`;
 					}).join('\n')
 				), { split:true });
+				break;
+
+			case '🔼':
+				reaction.users.remove(user).catch(console.error);
+				queueList.then((list) => {
+					message.channel.bulkDelete(list);
+				});
 				break;
 
 			case '⏹':

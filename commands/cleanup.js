@@ -6,7 +6,7 @@ module.exports = {
 		await message.channel.messages.fetch().then(async allMessages => {
 			const botMessages = await allMessages.filter(msg => msg.author.bot);
 			message.channel.send(`Deleted ${botMessages.size} bot messages`);
-			return message.channel.bulkDelete(botMessages);
+			return await message.channel.bulkDelete(botMessages, true);
 
 		}).catch(console.error);
 

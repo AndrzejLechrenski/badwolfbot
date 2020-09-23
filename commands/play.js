@@ -7,7 +7,7 @@ module.exports = {
 		if (!args[0]) return message.channel.send('Enter a YouTube link, Spotify link, or `Artist - Title`');
 
 		// If there's already a track playing
-		const alreadyPlaying = client.player.isPlaying(message.guild.id);
+		const alreadyPlaying = await client.player.isPlaying(message.guild.id);
 		if(alreadyPlaying) {
 
 			// Add the track to the queue
