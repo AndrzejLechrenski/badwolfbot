@@ -69,8 +69,9 @@ class Player {
 			// Get guild queue
 			const queue = this.queues.find((g) => g.guildID === guildID);
 			if (!queue) return reject(new Error('Not playing'));
+			// Get the art
 			const art = queue.playing.thumbnail;
-			// Resolve the art
+			// Resolve the promise
 			resolve(art);
 		});
 	}
