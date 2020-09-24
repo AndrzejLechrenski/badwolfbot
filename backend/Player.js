@@ -62,6 +62,8 @@ class Player {
 		// Listener to check if the channel is empty
 		client.on('voiceStateUpdate', (oldState, newState) => this._handleVoiceStateUpdate(oldState, newState));
 	}
+
+
 	art(guildID) {
 		return new Promise((resolve, reject) => {
 			// Get guild queue

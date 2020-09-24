@@ -96,7 +96,7 @@ module.exports = {
 				client.player.setVolume(message.guild.id, volume);
 				message.channel.send(`${user} 🔉 decreased volume to ${volume}%`)
 					.catch(console.error);
-				fs.writeFile('./config/settings.json', JSON.stringify(settings), 'utf8', function (err) {
+				fs.writeFile('./config/settings.json', JSON.stringify(settings), 'utf8', function(err) {
 					if (err) {
 						console.log('An error occured while writing volume to file.');
 						return console.log(err);
@@ -115,7 +115,7 @@ module.exports = {
 				client.player.setVolume(message.guild.id, volume);
 				message.channel.send(`${user} 🔊 increased volume to ${queue.volume}%`)
 					.catch(console.error);
-				fs.writeFile('./config/settings.json', JSON.stringify(settings), 'utf8', function (err) {
+				fs.writeFile('./config/settings.json', JSON.stringify(settings), 'utf8', function(err) {
 					if (err) {
 						console.log('An error occured while writing volume to File.');
 						return console.log(err);
@@ -133,8 +133,8 @@ module.exports = {
 			case '🔽':
 				reaction.users.remove(user).catch(console.error);
 				queueList = message.channel.send(`**Track queue**\n**1** Current - ${queue.playing.name} | **${queue.playing.duration}** | ${queue.playing.author}\n` + (
-					queue.tracks.map((track, i) => {
-						return `**${i + 2}** - ${track.name} | **${track.duration}** | ${track.author}`;
+					queue.tracks.map((queueTrack, i) => {
+						return `**${i + 2}** - ${queueTrack.name} | **${queueTrack.duration}** | ${queueTrack.author}`;
 					}).join('\n')
 				), { split:true });
 				break;
@@ -183,6 +183,7 @@ module.exports = {
 // 🔁 repeat
 // 🔽 show queue
 // 🔼 stop showing queue
+// 🔗 YouTube link to current track
 
 // Not
 // ⏩ ff 15 seconds
@@ -190,7 +191,6 @@ module.exports = {
 // 🔀 shuffle
 // ⏏ clear queue
 // ℹ instructions to use controls
-// 🔗 YouTube link to current track
 // 💾 save a copy of the current track
 // ⏺ add track to guild playlist
 // 🔃 add 10 random tracks from the guild playlist to the current queue

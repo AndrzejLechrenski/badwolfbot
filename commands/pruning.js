@@ -4,7 +4,7 @@ const fs = require ('fs');
 
 module.exports = {
 	name: 'pruning',
-	description: 'Toggle removal of users commands or set how long they stay before being deleted',
+	description: 'Set removal of successfully completely commands',
 	async run(client, message, args) {
 
 		// If no args, just toggle pruning
