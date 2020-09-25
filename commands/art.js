@@ -1,5 +1,3 @@
-const Discord = require('discord.js');
-
 module.exports = {
 	name: 'art',
 	description: 'Displays the cover art of the current track.',

@@ -26,8 +26,8 @@ module.exports = {
 				setTimeout(updateBar, seconds * 1000);
 			}
 			// Execute the update function
-			if (client.player.isPlaying(message.guild.id)) updateBar();
-			// Get us out of this loop
+			if (client.player.isPlaying(message.guild.id) && progress) updateBar();
+			// Get us out of the cycle
 			else return progress.edit(`Finished playing: \`${track.name}\``);
 		});
 
