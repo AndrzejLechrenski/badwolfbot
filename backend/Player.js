@@ -135,9 +135,9 @@ class Player {
 			// eslint-disable-next-line no-useless-escape
 			const matchYoutubeURL = query.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/);
 			if (matchYoutubeURL) {
-				query = matchYoutubeURL[1];
+				query = `'${matchYoutubeURL[1]}'`;
 			}
-			ytsr(query).then((results) => {
+			await ytsr(query).then((results) => {
 				if (results.items.length < 1) return resolve([]);
 				const resultsVideo = results.items.filter((i) => i.type === 'video');
 				resolve(allResults ? resultsVideo.map((r) => new Track(r, null, null)) : [new Track(resultsVideo[0], null, null)]);

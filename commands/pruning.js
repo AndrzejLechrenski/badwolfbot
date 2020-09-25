@@ -10,17 +10,17 @@ module.exports = {
 		// If no args, just toggle pruning
 		if (!args[0]) {
 			settings.userPruning = !settings.userPruning;
-			message.channel.send(`Pruning is now ${settings.userPruning ? '**on**' : '**off**'}`).catch(console.error);
+			message.channel.send(`User command auto-pruning is now ${settings.userPruning ? '**on**' : '**off**'}`).catch(console.error);
 
 		}
 		// If args are bettween 1-60, change the cooldown timer
 		else if (parseInt(args[0]) > 0 && parseInt(args[0]) <= 60) {
 			if (!settings.userPruning) {
 				settings.userPruning = true;
-				message.channel.send('Pruning is now **on**').catch(console.error);
+				message.channel.send('User command auto-pruning is now **on**').catch(console.error);
 			}
 			settings.cooldown = parseInt(args[0]);
-			message.channel.send(`Pruning time is now set to \`${settings.cooldown}\` seconds`).catch(console.error);
+			message.channel.send(`Pruning auto-delete time is now set to \`${settings.cooldown}\` seconds`).catch(console.error);
 
 		}
 		// If args are garbage, send usage notes
