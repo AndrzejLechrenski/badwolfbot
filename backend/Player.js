@@ -109,12 +109,12 @@ class Player {
      * });
      */
 
-	searchTracks(query, allResults = false) {
+	async searchTracks(query, allResults = false) {
 		return new Promise(async (resolve, reject) => {
 			if (ytpl.validateID(query)) {
-				const playlistID = await ytpl.getPlaylistID(query).catch(() => {});
+				const playlistID = await ytpl.getPlaylistID(query).catch(err => console.error(err));
 				if (playlistID) {
-					const playlist = await ytpl(playlistID).catch(() => {});
+					const playlist = await ytpl(playlistID).catch(err => console.error(err));
 					if (playlist) {
 						return resolve(playlist.items.map((i) => new Track({
 							title: i.title,
@@ -135,7 +135,7 @@ class Player {
 			// eslint-disable-next-line no-useless-escape
 			const matchYoutubeURL = query.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/);
 			if (matchYoutubeURL) {
-				query = `'${matchYoutubeURL[1]}'`;
+				query = `"${matchYoutubeURL[1]}"`;
 			}
 			await ytsr(query).then((results) => {
 				if (results.items.length < 1) return resolve([]);
@@ -185,7 +185,7 @@ class Player {
      * });
      */
 
-	play(voiceChannel, track, user) {
+	async play(voiceChannel, track, user) {
 		this.queues = this.queues.filter((g) => g.guildID !== voiceChannel.id);
 		return new Promise(async (resolve, reject) => {
 			if (!voiceChannel || typeof voiceChannel !== 'object') {
