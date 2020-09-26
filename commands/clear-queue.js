@@ -10,7 +10,7 @@ module.exports = {
 		client.player.clearQueue(message.guild.id);
 
 		// Message
-		message.channel.send('Queue cleared');
+		return message.channel.send('Queue cleared');
 
 	},
 

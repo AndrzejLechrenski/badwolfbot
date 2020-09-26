@@ -34,7 +34,7 @@ module.exports = {
 			const result = client.player._playYTDLStream(queue, seekTime);
 			// Message
 			if(!result) return message.channel.send('Seek failed!');
-			message.channel.send(`Seeking ${args[0]} seconds`).catch(console.error);
+			return message.channel.send(`Seeking ${args[0]} seconds`).catch(console.error);
 		}
 		else {
 			const seekTime = parse(args[0]);
@@ -46,7 +46,7 @@ module.exports = {
 			const result = client.player._playYTDLStream(queue, seekTime);
 			// Message
 			if(!result) return message.channel.send('Seek failed!');
-			message.channel.send(`Seeking to ${args[0]}`).catch(console.error);
+			return message.channel.send(`Seeking to ${args[0]}`).catch(console.error);
 		}
 	},
 };

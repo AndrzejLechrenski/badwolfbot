@@ -10,6 +10,6 @@ module.exports = {
 		if(!track) return message.channel.send('Nothing is playing');
 
 		// Message
-		message.channel.send(`Current track: \`${track.name}\` resumed`);
+		return message.channel.send(`Current track: \`${track.name}\` resumed`);
 	},
 };

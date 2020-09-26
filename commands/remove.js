@@ -10,7 +10,7 @@ module.exports = {
 		const track = await client.player.remove(message.guild.id, parseInt(args.join(' ')) - 2);
 
 		// Message
-		message.channel.send(`\`${track.name}\` removed from the queue`);
+		return message.channel.send(`\`${track.name}\` removed from the queue`);
 
 	},
 

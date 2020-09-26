@@ -4,7 +4,7 @@ module.exports = {
 	async run(client, message) {
 		const art = await client.player.art(message.guild.id);
 
-		message.channel.send(art);
+		return message.channel.send(art);
 
 
 	},

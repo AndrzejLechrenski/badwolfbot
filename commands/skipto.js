@@ -35,6 +35,6 @@ module.exports = {
 		}
 
 		// Message
-		message.channel.send(`${message.author} skipped ${args[0] - 1} tracks`).catch(console.error);
+		return message.channel.send(`${message.author} skipped ${args[0] - 1} tracks`).catch(console.error);
 	},
 };

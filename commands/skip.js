@@ -8,7 +8,7 @@ module.exports = {
 
 		// Message
 		const track = await client.player.skip(message.guild.id);
-		message.channel.send(`\`${track.name}\` skipped`);
+		return message.channel.send(`\`${track.name}\` skipped`);
 
 	},
 };

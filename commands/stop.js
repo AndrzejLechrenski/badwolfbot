@@ -10,6 +10,6 @@ module.exports = {
 		client.player.stop(message.guild.id);
 
 		// Message
-		message.channel.send('Music stopped. Queue cleared. Systems offline.');
+		return message.channel.send('Music stopped. Queue cleared. Systems offline.');
 	},
 };

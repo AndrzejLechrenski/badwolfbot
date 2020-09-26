@@ -10,7 +10,7 @@ module.exports = {
 		if(!queue) return message.channel.send('The queue is empty');
 
 		// Message
-		message.channel.send(`**Track queue**\n**1** Current - ${queue.playing.name} | **${queue.playing.duration}** | ${queue.playing.author}\n` + (
+		return message.channel.send(`**Track queue**\n**1** Current - ${queue.playing.name} | **${queue.playing.duration}** | ${queue.playing.author}\n` + (
 			queue.tracks.map((track, i) => {
 				return `**${i + 2}** - ${track.name} | **${track.duration}** | ${track.author}`;
 			}).join('\n')

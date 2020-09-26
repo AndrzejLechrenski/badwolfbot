@@ -9,6 +9,6 @@ module.exports = {
 		const track = await client.player.pause(message.guild.id);
 
 		// Message
-		message.channel.send(`Current track: \`${track.name}\` paused`);
+		return message.channel.send(`Current track: \`${track.name}\` paused`);
 	},
 };

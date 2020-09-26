@@ -6,7 +6,7 @@ module.exports = {
 	async run(client, message, args) {
 
 		// Message for Jackal
-		message.channel.send('Jackal, fuck you. I won\'t let you murder me like you murdered all the others.', { tts: true });
+		return message.channel.send('Jackal, fuck you. I won\'t let you murder me like you murdered all the others.', { tts: true });
 
 	},
 

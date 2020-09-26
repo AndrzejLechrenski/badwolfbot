@@ -11,7 +11,7 @@ module.exports = {
 		https.get(query, (res) => {
 			res.on('data', (d) => {
 				const jarls = JSON.parse(d);
-				message.channel.send(
+				return message.channel.send(
 					'PilotName: ' + jarls.PilotName + '\n' +
 					'Percentile: ' + jarls.Percentile + '%' + '\n' +
 					'W/L Ratio: ' + jarls.WLRatio + '\n' +
