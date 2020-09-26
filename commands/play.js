@@ -6,7 +6,11 @@ module.exports = {
 	async run(client, message, args) {
 
 		// If no tracks are given
-		if (!args[0]) return message.channel.send('Enter a YouTube link, Spotify link, or `Artist - Title`');
+		if (!args[0]) {
+			const track = await client.player.resume(message.guild.id);
+			if(!track) return message.channel.send('Enter a YouTube link, Spotify link, or `Artist - Title`');
+			return message.channel.send(`Current track: \`${track.name}\` resumed`);
+		}
 
 		// If there's already a track playing
 		const alreadyPlaying = await client.player.isPlaying(message.guild.id);
