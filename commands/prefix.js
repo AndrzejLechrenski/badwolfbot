@@ -1,6 +1,8 @@
 module.exports = {
 	name: 'prefix',
 	description: 'Change the command prefix.',
+	usage: ['<new prefix>'],
+	example: ['!'],
 	async run(client, message, args) {
 
 		// Message for Jackal

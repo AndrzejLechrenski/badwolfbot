@@ -3,6 +3,8 @@ const settings = require('../config/settings.json');
 module.exports = {
 	name: 'skipto',
 	description: 'Skip to a track number in queue',
+	usage: ['<track number in queue list>'],
+	examples: ['6'],
 	async run(client, message, args) {
 
 		// If no arguments

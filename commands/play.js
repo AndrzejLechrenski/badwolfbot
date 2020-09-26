@@ -1,6 +1,8 @@
 module.exports = {
 	name: 'play',
 	description: 'Play a YouTube link, Spotify link, or Artist - Title',
+	usage: ['<youtube link>', '<spotify link>', 'Artist - Title'],
+	examples: ['https://www.youtube.com/watch?v=lDC4X8Dgxr4', 'https://open.spotify.com/track/2SRMzskYrb5LWYeSnC3oxQ', 'Mega Man 2 - Dr. Wily\'s Castle'],
 	async run(client, message, args) {
 
 		// If no tracks are given

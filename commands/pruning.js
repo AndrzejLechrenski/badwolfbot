@@ -1,10 +1,11 @@
 const settings = require('../config/settings.json');
 const fs = require ('fs');
 
-
 module.exports = {
 	name: 'pruning',
 	description: 'Set removal of successfully completely commands',
+	usage: ['', '<time in seconds before command should be deleted>'],
+	examples: ['', '15'],
 	async run(client, message, args) {
 
 		// If no args, just toggle pruning

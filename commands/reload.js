@@ -1,6 +1,8 @@
 module.exports = {
 	name: 'reload',
 	description: 'Reloads command files',
+	usage: ['<command name>'],
+	example: ['play'],
 	debug: true,
 	async run(client, message, args) {
 

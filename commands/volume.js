@@ -4,6 +4,8 @@ const fs = require('fs');
 module.exports = {
 	name: 'volume',
 	description: 'Change the volume',
+	usage: ['<volume percent>', '+ (to increment by 5)', '- (to decrement by 5)'],
+	examples: ['25', '+', '-'],
 	async run(client, message, args) {
 
 		// Return the current volume if no Args are given

@@ -3,7 +3,8 @@ const settings = require('../config/settings.json');
 module.exports = {
 	name: 'seek',
 	description: 'Seeks to a specified time or ff a number or seconds',
-	usage: ['seek 1:30', 'seek 30'],
+	usage: ['<MM:SS>', '<number or seconds to seek forward>', '<number of seconds to seek in reverse>'],
+	examples: ['1:30', '30', '-25'],
 
 	async run(client, message, args) {
 

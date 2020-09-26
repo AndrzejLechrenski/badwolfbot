@@ -3,6 +3,8 @@ const https = require('https');
 module.exports = {
 	name: 'jarls',
 	description: 'Look up a pilot on The Jarl\'s List',
+	usage: ['<pilot name>'],
+	examples: ['Andrzej Lechrenski'],
 	async run(client, message, args) {
 
 		const query = `https://leaderboard.isengrim.org/api/usernames/${args.join(' ')}`;

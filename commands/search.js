@@ -3,6 +3,8 @@ const settings = require('../config/settings.json');
 module.exports = {
 	name: 'search',
 	description: 'Search YouTube and select a track from the results',
+	usage: ['<search string>'],
+	examples: ['megaman 2 soundtrack'],
 	async run(client, message, args) {
 
 		// If no arguments
