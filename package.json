@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/AndrzejLechrenski/badwolfbot#readme",
   "dependencies": {
+    "@discordjs/opus": "^0.3.2",
     "discord-ytdl-core": "^4.0.9",
     "discord.js": "^12.3.1",
     "dotenv": "^8.2.0",

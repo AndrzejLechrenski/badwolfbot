@@ -17,6 +17,8 @@ spotify-url-info (installed through npm)
 
 dotenv (installed through npm)
 
+@discordjs/opus (installed through npm)
+
 [ffmpeg](https://ffmpeg.org/download.html)
 
 ## Setup : 
