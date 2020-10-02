@@ -2,6 +2,5 @@ node_modules
 package-lock.json
 /config/security.json
 .eslintrc.json
-Procfile
 .env
 ffmpeg.exe
