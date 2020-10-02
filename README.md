@@ -15,7 +15,7 @@ ytpl (installed through npm)
 
 spotify-url-info (installed through npm)
 
-env (installed through npm)
+dotenv (installed through npm)
 
 [ffmpeg](https://ffmpeg.org/download.html)
 
