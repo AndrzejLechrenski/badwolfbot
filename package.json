@@ -27,6 +27,7 @@
     "discord.js": "^12.3.1",
     "dotenv": "^8.2.0",
     "env": "0.0.2",
+    "ffmpeg-static": "^4.2.7",
     "spotify-url-info": "^2.0.0",
     "ytpl": "^1.0.1",
     "ytsr": "^1.0.3"
