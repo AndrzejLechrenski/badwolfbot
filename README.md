@@ -25,7 +25,7 @@ Create a file in the bot root directory named ".env" with the following contents
 ``` 
 DISCORD_TOKEN=<yourdiscordtoken>
 ```
-where <yourdiscordtoken> is taken from the bot token you create at https://discord.com/developers/applications
+where `yourdiscordtoken` is taken from the bot token you create at https://discord.com/developers/applications
 
 For the time being, "ffmpeg.exe" must be in the root directory.
 
