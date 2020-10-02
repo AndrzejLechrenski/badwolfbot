@@ -1,0 +1,31 @@
+{
+  "name": "badwolfbot",
+  "version": "1.0.0",
+  "description": "A Discord music bot with several functions that occasionally work",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndrzejLechrenski/badwolfbot.git"
+  },
+  "keywords": [
+    "discord",
+    "music",
+    "bot"
+  ],
+  "author": "Andrzej Lechrenski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AndrzejLechrenski/badwolfbot/issues"
+  },
+  "homepage": "https://github.com/AndrzejLechrenski/badwolfbot#readme",
+  "dependencies": {
+    "discord-ytdl-core": "^4.0.9",
+    "discord.js": "^12.3.1",
+    "spotify-url-info": "^2.0.0",
+    "ytpl": "^1.0.1",
+    "ytsr": "^1.0.3"
+  }
+}
