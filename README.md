@@ -15,17 +15,17 @@ ytpl (installed through npm)
 
 spotify-url-info (installed through npm)
 
+env (installed through npm)
+
 [ffmpeg](https://ffmpeg.org/download.html)
 
 ## Setup : 
 
-Create a file in ./config named "security.json" with the following contents
+Create a file in the bot root directory named ".env" with the following contents
 ``` 
-{
-	"discordToken"	:	"<yourdiscordtoken>"
-}
+DISCORD_TOKEN=<yourdiscordtoken>
 ```
-where "yourdiscordtoken" is taken from the bot token you create at https://discord.com/developers/applications
+where <yourdiscordtoken> is taken from the bot token you create at https://discord.com/developers/applications
 
 For the time being, "ffmpeg.exe" must be in the root directory.
 

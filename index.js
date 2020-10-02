@@ -6,10 +6,11 @@ const Discord = require('discord.js');
 const Player = require('./backend/Player.js');
 
 // Load the Discord token
-const security = require('./config/security.json');
+require('dotenv').config();
+// const security = require('./config/security.json');
 
 // Initialize a Discord client for the bot
-const client = new Discord.Client();
+const client = new Discord.Client({ token: process.env.DISCORD_TOKEN });
 
 // Rename the backend (module exports as 'Player') for easier use. Associate it with the bot.
 const player = new Player(client);
@@ -45,4 +46,4 @@ fs.readdir('./commands/', (err, files) => {
 process.on('unhandledRejection', error => console.error('Uncaught Promise Rejection', error));
 
 // Bot should log in
-client.login(security.discordToken);
+client.login(client.token);

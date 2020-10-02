@@ -4,3 +4,4 @@ ffmpeg.exe
 /config/security.json
 .eslintrc.json
 Procfile
+.env
