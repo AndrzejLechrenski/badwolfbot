@@ -12,7 +12,7 @@ module.exports = {
 		if (!args[0]) return message.channel.send(`Current volume is \`${settings.volume}\``);
 
 		// Security modification
-		if (args[0] != '+' && args[0] != '-' && isNaN(args[0])) return message.channel.send('Please enter a valid integer or `+` or `-`');
+		if (args[0] != '+' && args[0] != '-' && isNaN(parseInt(args[0]))) return message.channel.send('Please enter a valid integer or `+` or `-`');
 		if (args[0] > 100) return message.channel.send('Volume must be less than 100');
 		if (args[0] < 0) return message.channel.send('Volume must be greater than zero');
 		if (message.content.includes(',')) return message.channel.send('Please enter a valid integer');
